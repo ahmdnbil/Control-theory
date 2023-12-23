@@ -1,2 +1,0 @@
-  basicOpenLoopMSD1.c
-
