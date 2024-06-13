@@ -3,7 +3,7 @@ clc
 
 num=1;
 den=[0 ; -1; -2 ; -3];
-sys=tf(num,poly(den));
+sys=tf(num,poly(den))
 figure(1);
 rlocus(sys);
 grid on;
@@ -12,7 +12,7 @@ grid on;
 %so i decided to make the poles to make it stable and critically  damped
 
 % i get this gain from the root locus curve
-feedback_gain=.999;
+feedback_gain=1;
 
 %making feedback gain as a transfer function
 feedback_sys=tf(feedback_gain,1);
