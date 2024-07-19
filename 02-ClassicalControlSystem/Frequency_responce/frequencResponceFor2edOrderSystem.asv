@@ -1,0 +1,26 @@
+clear;
+clc;
+
+s=tf('s');
+G1=1/(s^2+4*s+4); % zeta =2
+G2=1/(s^2+s+4); % zeta =.25
+
+%generate frequencies
+frequencies=logspace(-1,2,1000);
+
+%substitute the frequencies in sinsouidal TF
+H_large_zeta=freqresp(G1,frequencies);
+H_small_zeta=freqresp(G2,frequencies);
+
+%remove not necessaries dimensions
+H_large_zeta=squeeze(H_large_zeta);
+H_small_zeta=squeeze(H_small_zeta);
+
+%get the phase and magnitude
+H_large_zeta_mag=abs(H_large_zeta);
+H_large_zeta_phase=angle(H_large_zeta);
+
+H_small_zeta_mag=abs(H_small_zeta);
+H_small_zeta_phase=angle(H_small_zeta);
+
+polarplo

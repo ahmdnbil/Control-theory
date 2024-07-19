@@ -1,0 +1,23 @@
+commands used in freq-responce
+
+bode
+margin
+grid
+abs
+mag
+imag
+real
+
+logspace(-1,2,1000)
+it will get 1000 number between -1 & 2 each number is power of 10
+for example [10^-1 to 10^(2)]
+
+[H, w]=freqresp(sys,frequencies)
+frequencies: which we got from logspace it will be substitute to sys in form of "sinsouidal TF"
+H: will be the vector resulted from substitution
+w: is the frequency you have entered
+for example sys = 1/s in sin form sys_sin=1/jw then sub w with each frequency
+
+squeeze: remove unnessary dimensions
+
+polarplot(phase,mag)
