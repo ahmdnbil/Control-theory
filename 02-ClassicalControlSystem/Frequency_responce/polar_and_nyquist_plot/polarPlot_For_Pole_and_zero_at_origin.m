@@ -5,7 +5,7 @@ clc
 s=tf('s');
 G1=1/s;
 %zero at origin
-G2=s
+G2=s;
 
 % Compute the frequency response
 frequencies = logspace(-1, 2, 1000); % Frequency range from 0.1 to 100 rad/s
