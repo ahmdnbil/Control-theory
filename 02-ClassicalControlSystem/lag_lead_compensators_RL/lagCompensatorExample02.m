@@ -37,9 +37,9 @@ Beta=new_kv/Kv;
 %for lag compensator condition ζc >> Pc & ζc nearly equal Pc
 %so let's choose Pc = .005
 Pc =0.005;
-zeta_c=Beta*Pc;
+Zc=Beta*Pc;
 
-compensatorTF=tf([1 zeta_c],[1 Pc]);        
+compensatorTF=tf([1 Zc],[1 Pc]);        
 G_Compensated=series(compensatorTF,G);
 figure(2)
 rlocus(G_Compensated)
